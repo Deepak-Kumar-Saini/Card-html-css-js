@@ -1,10 +1,15 @@
-const nameHeading = document.getElementById('name')
-const image = document.getElementById('image')
+const nameHeadings = document.querySelectorAll('.name-heading')
+const images = document.querySelectorAll('.image')
 
+
+nameHeadings.forEach((nameHeading)=>{
 nameHeading.addEventListener('mouseenter',()=>{
-    image.classList.add('animation')
+    images.forEach((image)=> image.classList.add('animation'))
+})
 })
 
+nameHeadings.forEach((nameHeading)=>{
 nameHeading.addEventListener('mouseout',()=>{
-    image.classList.remove('animation')
+    images.forEach((image)=> image.classList.remove('animation'))
+})
 })
